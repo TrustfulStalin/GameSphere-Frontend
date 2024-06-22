@@ -1,0 +1,8 @@
+.review-stars {
+    display: inline-block;
+  }
+  
+  .star {
+    color: #ffd700; /* Yellow color for stars */
+    font-size: 1.2rem; /* Adjust size as needed */
+  }

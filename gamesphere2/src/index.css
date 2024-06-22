@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.background {
+  background-image: url('https://tenor.com/view/blue-drip-neon-elevation-cool-gif-20886784');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Optionally, you can add more styles like height, padding, etc. */
+  height: 100vh; /* Example: sets the container height to full viewport height */
+  padding: 20px; /* Adds padding inside the container */
+}
