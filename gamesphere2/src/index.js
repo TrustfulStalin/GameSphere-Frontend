@@ -36,7 +36,7 @@ root.render(
         <Route path="/Fighters/:_id" element={<FightingUpandData />} />
         <Route path="/Shooting/:_id" element={<ShootingUpandData />} />
         <Route path="/Sport/:_id" element={<SportsUpandData />} />
-       
+        <Route path="/" element={<HomePage />}> </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
