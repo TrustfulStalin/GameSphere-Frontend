@@ -24,7 +24,7 @@ const ActionCreate = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://main--gamesphere93.netlify.app/action/${id}`, {
+      const response = await fetch(`https://main--gamesphere93.netlify.app/actions/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
