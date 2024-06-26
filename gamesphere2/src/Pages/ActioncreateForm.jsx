@@ -19,7 +19,7 @@ const ActionCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8081/actions', {
+      const response = await fetch('https://main--gamesphere93.netlify.app/actions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

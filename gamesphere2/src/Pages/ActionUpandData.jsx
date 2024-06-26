@@ -19,7 +19,7 @@ const ActionUp = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8081/actions/${_id}`);
+        const response = await fetch(`https://main--gamesphere93.netlify.app/actions/${_id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch action data');
         }
@@ -48,7 +48,7 @@ const ActionUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8081/actions/${_id}`, {
+      const response = await fetch(`https://main--gamesphere93.netlify.app/actions/${_id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
