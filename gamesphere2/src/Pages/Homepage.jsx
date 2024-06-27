@@ -1,14 +1,15 @@
-import Header from "../Components/Header"
-function home (){
+import React from 'react';
+import Header from '../Components/Header';
+import './home.css';
 
-
-return(
-    <>
-<Header/>
-<h1>A place for hardcore gamers</h1>
-</>
-)
-
+function Home() {
+  return (
+    <div className="home-container">
+      <Header />
+      <h1 className="h1">A place for hardcore gamers</h1>
+      {/* Additional content or components can be added here */}
+    </div>
+  );
 }
 
 
@@ -18,4 +19,5 @@ return(
 
 
 
-export default home
+
+export default Home

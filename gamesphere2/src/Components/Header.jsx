@@ -1,6 +1,5 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
 
 function Header() {
   const navStyle = {
@@ -10,22 +9,32 @@ function Header() {
     padding: "8px",
     width: "90%",
     margin: "auto",  // Center the navigation horizontally
+    backgroundColor: "white", // Set background color to white
   };
 
   const divStyle = {
-    borderBottom: "1px solid black", // Border between divs
     padding: "4px 8px",
+    borderBottom: "1px solid black", // Border between divs
+    borderRight: "1px solid black", // Border between links
   };
 
   return (
     <header>
       <h1 style={{ textAlign: "center" }}>Game Sphere</h1>
       <nav className="navStyle" style={navStyle}>
-       <Link to= "/action"> <div style={divStyle}>Action Games</div></Link>
-        <Link to= "/Shooting"><div style={divStyle}>Shooting Games</div></Link>
-        <Link to= "/Fighting"><div style={divStyle}>Fighting Games</div></Link>
-        <Link to= "/Sport"><div style={divStyle}>Sport Games</div></Link>
-        <div style={divStyle}>
+        <Link to="/action" style={divStyle}>
+          Action Games
+        </Link>
+        <Link to="/Shooting" style={divStyle}>
+          Shooting Games
+        </Link>
+        <Link to="/Fighting" style={divStyle}>
+          Fighting Games
+        </Link>
+        <Link to="/Sport" style={divStyle}>
+          Sport Games
+        </Link>
+        <div style={{ ...divStyle, borderRight: "none" }}>
           <Link to="/home">Home page</Link>
         </div>
       </nav>

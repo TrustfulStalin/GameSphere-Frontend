@@ -11,7 +11,7 @@ const ActionCreate = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/actions');
+      const response = await fetch('https://localhost:8081/actions');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
