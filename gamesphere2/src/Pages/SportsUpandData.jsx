@@ -76,6 +76,7 @@ const SportsUpandData = () => {
 
   return (
     <>
+    <Header/>
     <div className="sports-details">
       <h2 className="title">Sports Details for ID: {_id}</h2>
       {sportsData ? (
