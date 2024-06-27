@@ -11,7 +11,7 @@ const ShootingGames = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:8081/shooter');
+      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/shooter');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -24,7 +24,7 @@ const ShootingGames = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8081/shooters/${id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/shooters/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

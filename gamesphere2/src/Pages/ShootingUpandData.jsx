@@ -17,7 +17,7 @@ const ShootingUpandData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8081/shooter/${_id}`);
+        const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/shooter/${_id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch shooter data');
         }
@@ -54,7 +54,7 @@ const ShootingUpandData = () => {
         stars: parseInt(stars, 10) // Convert to number if necessary
       };
 
-      const response = await fetch(`http://localhost:8081/shooter/${_id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/shooter/${_id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

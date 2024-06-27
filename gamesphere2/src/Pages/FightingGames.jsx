@@ -11,7 +11,7 @@ const FightingGames = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`http://localhost:8081/fighter`,);
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/fighter`,);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -24,7 +24,7 @@ const FightingGames = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8081/fighters/${id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/fighters/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

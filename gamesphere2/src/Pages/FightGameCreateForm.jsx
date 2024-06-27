@@ -20,7 +20,7 @@ const FightGameCreateForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8081/fighters', {
+      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/fighters', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

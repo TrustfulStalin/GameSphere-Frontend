@@ -19,7 +19,7 @@ const ActionCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://localhost:8081/actions', {
+      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/actions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

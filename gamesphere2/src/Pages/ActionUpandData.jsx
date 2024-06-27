@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './ActSingle.css';
 import RatingStars from '../Components/RatingStars'; // Adjust path as necessary
 import Header from '../Components/Header';
-import '../index.css'
+import '../index.css';
 
 const ActionUp = () => {
   const { _id } = useParams(); // Access the _id parameter from the URL
@@ -19,7 +19,7 @@ const ActionUp = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8081/actions/${_id}`);
+        const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${_id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch action data');
         }
@@ -28,7 +28,7 @@ const ActionUp = () => {
         // Populate the form fields with fetched data
         setFormData({
           name: data.name,
-          rating: data.rating, // Using 'rating' for both 'rating' and 'stars' fields
+          rating: data.rating,
           review: data.review,
           image: data.image || '',
           average: data.average
@@ -39,7 +39,7 @@ const ActionUp = () => {
     };
 
     fetchData();
-  }, [_id]); // Fetch data whenever the _id parameter changes
+  }, [_id]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -48,7 +48,7 @@ const ActionUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8081/actions/${_id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${_id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -67,49 +67,49 @@ const ActionUp = () => {
 
   return (
     <>
-    <Header/>
-    <div className="action-details">
-      <h2>Action Details for ID: {_id}</h2>
-      {actionData ? (
-        <div>
-          <div className="action-info">
-            <p><strong>Name:</strong> {actionData.name}</p>
-            <p><strong>Image:</strong> {actionData.image && <img src={actionData.image} alt={actionData.name} />}</p>
-            <div className="rating-stars-container">
-              <p><strong>Rating:</strong> <RatingStars rating={formData.rating} /></p>
+      <Header />
+      <div className="action-details">
+        <h2>Action Details for ID: {_id}</h2>
+        {actionData ? (
+          <div>
+            <div className="action-info">
+              <p><strong>Name:</strong> {actionData.name}</p>
+              <p><strong>Image:</strong> {actionData.image && <img src={actionData.image} alt={actionData.name} />}</p>
+              <div className="rating-stars-container">
+                <p><strong>Rating:</strong> <RatingStars rating={formData.rating} /></p>
+              </div>
+              <p><strong>Review:</strong> {actionData.review}</p>
+              <p><strong>Stars:</strong> {formData.rating}</p>
+              <p><strong>Average:</strong> {actionData.average}</p>
             </div>
-            <p><strong>Review:</strong> {actionData.review}</p>
-            <p><strong>Stars:</strong> {formData.rating}</p>
-            <p><strong>Average:</strong> {actionData.average}</p>
+            <form className="action-update-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label>Rating/Stars:</label>
+                <input type="number" name="rating" value={formData.rating} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label>Review:</label>
+                <textarea name="review" value={formData.review} onChange={handleChange}></textarea>
+              </div>
+              <div className="form-group">
+                <label>Image URL:</label>
+                <input type="text" name="image" value={formData.image} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label>Average:</label>
+                <input type="number" name="average" value={formData.average} onChange={handleChange} />
+              </div>
+              <button type="submit">Update</button>
+            </form>
           </div>
-          <form className="action-update-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label>Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            </div>
-            <div className="form-group">
-              <label>Rating/Stars:</label>
-              <input type="number" name="rating" value={formData.rating} onChange={handleChange} />
-            </div>
-            <div className="form-group">
-              <label>Review:</label>
-              <textarea name="review" value={formData.review} onChange={handleChange}></textarea>
-            </div>
-            <div className="form-group">
-              <label>Image URL:</label>
-              <input type="text" name="image" value={formData.image} onChange={handleChange} />
-            </div>
-            <div className="form-group">
-              <label>Average:</label>
-              <input type="number" name="average" value={formData.average} onChange={handleChange} />
-            </div>
-            <button type="submit">Update</button>
-          </form>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </>
   );
 };
