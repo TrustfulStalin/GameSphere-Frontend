@@ -6,6 +6,7 @@
   
   .card {
     border: 1px solid #ccc;
+    background-image: "https://media.tenor.com/Rfk3KapYYLcAAAAM/fireball-hell-hole.gif";
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 10px;
@@ -17,6 +18,7 @@
   .card-body {
     display: flex;
     flex-direction: column;
+    background-image: "https://media.tenor.com/Rfk3KapYYLcAAAAM/fireball-hell-hole.gif";
   }
   
   .card-body h3 {

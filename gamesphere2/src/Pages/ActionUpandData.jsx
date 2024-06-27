@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import './ActSingle.css';
 import RatingStars from '../Components/RatingStars'; // Adjust path as necessary
 import Header from '../Components/Header';
-import '../index.css';
+import AudioPlayer from '../Components/Audioplayer';
+
 
 const ActionUp = () => {
   const { _id } = useParams(); // Access the _id parameter from the URL
@@ -109,6 +110,9 @@ const ActionUp = () => {
         ) : (
           <p>Loading...</p>
         )}
+           <main>
+        <AudioPlayer url={'https://www.youtube.com/watch?v=CnQm2_cAZvo'} autoplay={true}  />
+      </main>
       </div>
     </>
   );

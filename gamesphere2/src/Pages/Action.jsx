@@ -22,9 +22,9 @@ const ActionCreate = () => {
     }
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (_id) => {
     try {
-      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${_id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

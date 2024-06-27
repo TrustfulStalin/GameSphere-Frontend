@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ActSingle.css';
 import Header from '../Components/Header';
+import AudioPlayer from '../Components/Audioplayer';  // Adjust the path as necessary
 
 const SportsUpandData = () => {
   const { _id } = useParams(); // Access the _id parameter from the URL
@@ -114,6 +115,10 @@ const SportsUpandData = () => {
             </div>
             <button type="submit">Update</button>
           </form>
+
+          <main>
+        <AudioPlayer url={'https://www.youtube.com/watch?v=PYRCDD7XXsc&list=RDPYRCDD7XXsc&start_radio=1&rv=wBSwSBsgQ8M'} autoplay={true}  />
+      </main>
         </div>
       ) : (
         <p>Loading...</p>
