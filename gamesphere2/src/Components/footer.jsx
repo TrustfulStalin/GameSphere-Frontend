@@ -31,7 +31,7 @@ function Footer() {
           Add a Fighting game
         </Link>
         <Link to="/Sport/Create" style={linkStyle}>
-          TAdd a Sports game
+          Add a Sports game
         </Link>
       </nav>
       <p style={{ textAlign: "center", marginTop: "10px" }}>
