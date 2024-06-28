@@ -11,6 +11,7 @@ function Footer() {
     margin: "auto", // Center the footer horizontally
     backgroundColor: "white", // Set background color to white
     marginTop: "20px", // Add some space between content and footer
+    bottom: 0
   };
 
   const linkStyle = {

@@ -1,26 +1,34 @@
 .action-list {
-    margin-bottom: 20px;
-    display: flex;
-   
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+  justify-content: center; /* Center-align cards horizontally */
+}
+
+.card {
+  flex: 0 1 calc(25% - 20px); /* Adjust card width to fit four cards per row with gap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 300px; /* Adjust card height as needed */
+ /* Optional: Background image */
+  background-size: cover; /* Ensure background image covers the entire card */
+  background-repeat: no-repeat; /* Ensure background image does not repeat */
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
   .actiondiv {
     background-image: url('https://i.pinimg.com/originals/f9/6d/fb/f96dfb9f9d4e0b42af3888de8b9473a7.gif');
+    background-size: cover;
   /* Ensure the background image does not repeat */
     /* You can add more styles as needed */
   }
-  
-  .card {
-    border: 1px solid #ccc;
-    background-image: "https://media.tenor.com/Rfk3KapYYLcAAAAM/fireball-hell-hole.gif";
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    height: 200px;
-    width: 200px;
-  }
-  
+
   .card-body {
     display: flex;
     flex-direction: column;
@@ -61,4 +69,5 @@
     border-top: 3px solid black;
     padding: 10px 0;
     text-align: center;
+    
   }
