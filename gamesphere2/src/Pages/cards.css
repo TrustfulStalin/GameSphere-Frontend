@@ -52,3 +52,13 @@
   .card-button:hover {
     background-color: #0056b3;
   }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 3px solid black;
+    padding: 10px 0;
+    text-align: center;
+  }
