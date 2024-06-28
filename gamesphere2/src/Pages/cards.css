@@ -3,6 +3,12 @@
     display: flex;
    
   }
+
+  .actiondiv {
+    background-image: url('https://i.pinimg.com/originals/f9/6d/fb/f96dfb9f9d4e0b42af3888de8b9473a7.gif');
+    background-repeat: no-repeat; /* Ensure the background image does not repeat */
+    /* You can add more styles as needed */
+  }
   
   .card {
     border: 1px solid #ccc;

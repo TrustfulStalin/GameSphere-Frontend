@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './cards.css';
 import Header from '../Components/Header';
+import Footer from '../Components/footer';
 
 const ActionCreate = () => {
   const [actions, setActions] = useState([]);
@@ -22,9 +23,9 @@ const ActionCreate = () => {
     }
   };
 
-  const handleDelete = async (_id) => {
+  const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${_id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/actions/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {
@@ -40,6 +41,7 @@ const ActionCreate = () => {
 
   return (
     <>
+    <div className='actiondiv'>
     <Header/>
       <h1 className='title'>Action Games List</h1>
 
@@ -53,6 +55,8 @@ const ActionCreate = () => {
             </div>
           </div>
         ))}
+      </div>
+      <Footer/>
       </div>
     </>
   );
