@@ -41,8 +41,8 @@
   }
   
   .card-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 220px;
+    height: 220px;
     border-radius: 8px;
     margin-bottom: 10px;
   }
@@ -70,4 +70,85 @@
     padding: 10px 0;
     text-align: center;
     
+  }
+  .title
+  {
+    color: grey;
+  }
+
+  .action-list-shoot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+    justify-content: center; /* Center-align cards horizontally */
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXpwNmNobWI3dWdjMTdwYWRlYWgweHluczg5dmlud3BycjRneGRyNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7buijTqhjxjbEqjK/giphy.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+  
+  .action-list-shoot h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .action-list-shoot a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .fighter-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url('https://t4.ftcdn.net/jpg/06/86/34/47/240_F_686344787_OLFFBXI3FC2yZROQAi55pXzvLjsmsdl0.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .fighter-list h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .fighter-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-image: url('https://t3.ftcdn.net/jpg/04/83/81/78/240_F_483817817_dVwUCdYSLnITSsOpsLr42bnUz9Xit92N.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .sports-list h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .sports-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .h3{
+    color:black
   }

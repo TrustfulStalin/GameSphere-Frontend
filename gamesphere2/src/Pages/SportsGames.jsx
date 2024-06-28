@@ -42,7 +42,7 @@ const SportsGames = () => {
     <Header/>
       <h1 className='title'>Sports Games List</h1>
 
-      <div className="action-list">
+      <div className="sports-list">
         {sports.map(sport => (
           <div key={sport._id} className="card">
             <div className="card-body">

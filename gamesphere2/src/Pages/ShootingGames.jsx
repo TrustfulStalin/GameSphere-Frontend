@@ -43,10 +43,10 @@ const ShootingGames = () => {
     <Header/>
       <h1 className='title'>Shooter Games List</h1>
 
-      <div className="action-list">
+      <div className="action-list-shoot">
         {shooters.map(shooter => (
           <div key={shooter._id} className="card">
-            <div className="card-body">
+            <div className="card-body-shoot">
               <h3><a href={`/Shooting/${shooter._id}`}>{shooter.name}</a></h3>
               {shooter.image && <img src={shooter.image} alt={shooter.name} className='card-image' />}
               <button onClick={() => handleDelete(shooter._id)}>Delete</button>

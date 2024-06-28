@@ -43,7 +43,7 @@ const FightingGames = () => {
     <Header/>
       <h1 className='title'>Fighter List</h1>
 
-      <div className="action-list">
+      <div className="fighter-list">
         {fighters.map(fighter => (
           <div key={fighter._id} className="card">
             <div className="card-body">
