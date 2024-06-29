@@ -51,7 +51,7 @@ const FightingUpandData = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/fighters/${_id}`, {
+      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/fighter/${_id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
