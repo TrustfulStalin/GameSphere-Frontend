@@ -62,7 +62,7 @@ const ActionCreate = () => {
 
       </div>
              
-     
+     <Footer/>
     </>
   
   );

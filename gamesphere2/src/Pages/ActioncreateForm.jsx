@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Actionform.css';
 import Header from '../Components/Header';
+import Footer from '../Components/footer';
 const ActionCreate = () => {
   const [formData, setFormData] = useState({
     _id: '',
@@ -83,8 +84,10 @@ const ActionCreate = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
-      </div>
+      </div>  
+     
     </>
+  
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './cards.css';
 import Header from '../Components/Header';
+import Footer from '../Components/footer';
 
 const FightingGames = () => {
   const [fighters, setFighters] = useState([]);
@@ -54,6 +55,7 @@ const FightingGames = () => {
           </div>
         ))}
       </div>
+      <Footer/>
     </>
   );
 };

@@ -1,0 +1,60 @@
+/* Apply styles to the whole page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Flexbox container for the page content */
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  /* Main content container */
+  .main-content {
+    flex: 1; /* Take up remaining vertical space */
+    /* Add your own styles for main content if necessary */
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color:transparent;
+    color: white;
+    padding: 0px;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+    color: black;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid #6d6d6d;
+    padding: 1px 0;
+    margin-bottom: 1px;
+  }
+  
+  .footer-link {
+    color:black;
+    text-decoration:none;
+    padding: 10px 15px;
+    border-bottom: 1px solid #6d6d6d;
+    transition: color 0.3s;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-emphasis: bold;
+
+  }
+  
+  .footer-link:hover {
+    color: #ffffff;
+  }
+  
+  .footer-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    color: black;
+  }

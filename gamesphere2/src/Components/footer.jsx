@@ -1,42 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Footer.css"; // Import CSS file for footer styling
 
 function Footer() {
-  const footerStyle = {
-    display: "flex",
-    justifyContent: "space-around",
-    borderTop: "3px solid black",
-    padding: "8px",
-    width: "90%",
-    margin: "auto", // Center the footer horizontally
-    backgroundColor: "white", // Set background color to white
-    marginTop: "20px", // Add some space between content and footer
-    bottom: 0
-  };
-
-  const linkStyle = {
-    padding: "4px 8px",
-    borderBottom: "1px solid black", // Border between links
-  };
-
   return (
-    <footer>
-      <nav className="footer-nav" style={footerStyle}>
-        <Link to="/Action/Create" style={linkStyle}>
-          Add an action game
+    <footer className="footer">
+      <nav className="footer-nav">
+        <Link to="/Action/Create" className="footer-link">
+          Add A Action Game
         </Link>
-        <Link to="/Shooting/Create" style={linkStyle}>
-          Add a Shooting game
+        <Link to="/Shooting/Create" className="footer-link">
+          Add A Shooting Game
         </Link>
-        <Link to="/Fighting/Create" style={linkStyle}>
-          Add a Fighting game
+        <Link to="/Fighting/Create" className="footer-link">
+          Add A Fighting Game
         </Link>
-        <Link to="/Sport/Create" style={linkStyle}>
-          Add a Sports game
+        <Link to="/Sport/Create" className="footer-link">
+          Add A Sports Game
         </Link>
       </nav>
-      <p style={{ textAlign: "center", marginTop: "10px" }}>
-        &copy; {new Date().getFullYear()} Game Sphere. All rights reserved.
+      <p className="footer-text">
+        &copy; {new Date().getFullYear()} 
       </p>
     </footer>
   );
