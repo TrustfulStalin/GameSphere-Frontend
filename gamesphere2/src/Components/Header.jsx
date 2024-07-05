@@ -8,14 +8,14 @@ function Header() {
     border: "3px solid black",
     padding: "8px",
     width: "90%",
-    margin: "auto",  // Center the navigation horizontally
-    backgroundColor: "white", // Set background color to white
+    margin: "auto",  
+    backgroundColor: "white", 
   };
 
   const divStyle = {
     padding: "4px 8px",
-    borderBottom: "1px solid black", // Border between divs
-    borderRight: "1px solid black", // Border between links
+    borderBottom: "1px solid black", 
+    borderRight: "1px solid black", 
   };
 
   return (

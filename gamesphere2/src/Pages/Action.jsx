@@ -32,7 +32,7 @@ const ActionCreate = () => {
         throw new Error('Failed to delete data');
       }
       alert('Data deleted successfully!');
-      fetchData(); // Refresh the action list after deletion
+      fetchData(); 
     } catch (error) {
       console.error('Error deleting data:', error.message);
       alert('Failed to delete data. Please try again.');

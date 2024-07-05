@@ -31,7 +31,7 @@ const ActionCreate = () => {
         throw new Error('Failed to submit data');
       }
       alert('Data submitted successfully!');
-      // Optionally reset form fields after successful submission
+    
       setFormData({
         _id: '',
         name: '',

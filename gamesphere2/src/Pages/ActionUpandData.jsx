@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ActSingle.css';
-import RatingStars from '../Components/RatingStars'; // Adjust path as necessary
+import RatingStars from '../Components/RatingStars'; 
 import Header from '../Components/Header';
 import AudioPlayer from '../Components/Audioplayer';
 
 
 const ActionUp = () => {
-  const { _id } = useParams(); // Access the _id parameter from the URL
+  const { _id } = useParams(); 
   const [actionData, setActionData] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
-    rating: '', // Using 'rating' for both 'rating' and 'stars' fields
+    rating: '', 
     review: '',
     image: '',
     average: ''
@@ -26,7 +26,7 @@ const ActionUp = () => {
         }
         const data = await response.json();
         setActionData(data);
-        // Populate the form fields with fetched data
+    
         setFormData({
           name: data.name,
           rating: data.rating,

@@ -37,7 +37,7 @@ const SportsUpandData = () => {
     };
 
     fetchData();
-  }, [_id]); // Fetch data whenever the _id parameter changes
+  }, [_id]); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

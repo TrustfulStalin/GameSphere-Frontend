@@ -1,13 +1,13 @@
-// AudioPlayer.js
+
 
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import '../Pages/Audio.css'; // Import your CSS file for styling
+import '../Pages/Audio.css'; 
 
 
 const AudioPlayer = ({ url }) => {
   const [playing, setPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5); // Initial volume
+  const [volume, setVolume] = useState(0.5); 
 
   const handlePlayPause = () => {
     setPlaying(!playing);
@@ -23,7 +23,7 @@ const AudioPlayer = ({ url }) => {
         url={url}
         playing={playing}
         volume={volume}
-        controls={true} // Show default player controls
+        controls={true} 
         width="100%"
         height="50px"
         onPlay={() => setPlaying(true)}

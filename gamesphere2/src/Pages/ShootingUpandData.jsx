@@ -4,11 +4,11 @@ import './ActSingle.css';
 import Header from '../Components/Header';
 
 const ShootingUpandData = () => {
-  const { _id } = useParams(); // Access the _id parameter from the URL
+  const { _id } = useParams(); 
   const [shooterData, setShooterData] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
-    rating: '', // Combine rating and stars into one variable
+    rating: '', 
     review: '',
     image: '',
     average: ''
@@ -25,7 +25,7 @@ const ShootingUpandData = () => {
         setShooterData(data);
         setFormData({
           name: data.name,
-          rating: `${data.rating} / ${data.stars}`, // Combine rating and stars
+          rating: `${data.rating} / ${data.stars}`, 
           review: data.review,
           image: data.image || '',
           average: data.average
@@ -45,13 +45,13 @@ const ShootingUpandData = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Assuming backend expects combined rating and stars format
+     
       const { rating } = formData;
       const [actualRating, stars] = rating.split(' / ');
       const updatedData = {
         ...formData,
-        rating: parseFloat(actualRating), // Convert to number if necessary
-        stars: parseInt(stars, 10) // Convert to number if necessary
+        rating: parseFloat(actualRating), 
+        stars: parseInt(stars, 10) 
       };
 
       const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/shooter/${_id}`, {
