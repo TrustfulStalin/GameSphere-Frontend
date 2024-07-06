@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './cards.css';
 import Header from '../Components/Header';
-import Footer from '../Components/Footer'; // Corrected import path (capital 'F' in Footer)
+import Footer from '../Components/footer'; // Corrected import path (capital 'F' in Footer)
 
 const ActionCreate = () => {
   const [actions, setActions] = useState([]);
