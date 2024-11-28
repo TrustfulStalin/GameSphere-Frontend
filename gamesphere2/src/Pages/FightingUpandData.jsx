@@ -20,7 +20,7 @@ const FightingUpandData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/fighter/${_id}`);
+        const response = await fetch(`https://backgame-c41e5170a8e2.herokuapp.com/fighter/${_id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch fighter data');
         }
