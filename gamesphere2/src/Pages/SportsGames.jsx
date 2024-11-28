@@ -11,7 +11,7 @@ const SportsGames = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/sport');
+      const response = await fetch('https://backgame-c41e5170a8e2.herokuapp.com/sport');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -24,7 +24,7 @@ const SportsGames = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`https://capstone-back-78a0aa10b637.herokuapp.com/sports/${id}`, {
+      const response = await fetch(`https://backgame-c41e5170a8e2.herokuapp.com/sports/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

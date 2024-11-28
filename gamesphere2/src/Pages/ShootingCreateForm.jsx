@@ -19,7 +19,7 @@ const ShootingCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://capstone-back-78a0aa10b637.herokuapp.com/shooters', {
+      const response = await fetch('https://backgame-c41e5170a8e2.herokuapp.com/shooters', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
