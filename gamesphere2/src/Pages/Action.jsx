@@ -12,7 +12,7 @@ const ActionCreate = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://backgame-c41e5170a8e2.herokuapp.com//actions`);
+      const response = await fetch(`https://backgame-c41e5170a8e2.herokuapp.com/actions`);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
